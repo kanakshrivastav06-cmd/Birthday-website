@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Favourite Creaturee :3</title>
-     <link rel="icon" href="shy.jpeg" type="image/x-icon" border-radius="23px">
+    <link rel="icon" href="Shy.jpeg" type="image/x-icon" border-radius="23px">
     <style>
         * {
             font-family: "Poppins", sans-serif;
@@ -77,21 +78,21 @@
             font-size: 32px;
         }
 
-
+        /* 
         .card-grid {
-            /* display: grid; */
+            display: grid;
             grid-template-columns: repeat(2, 1fr);
             grid-template-rows: repeat(3, 1fr);
             row-gap: 1.9rem;
             height: calc(100vh - 220px);
             display: flex;
-            /* display: grid; */
+            /* display: grid; 
             gap: 20px;
 
-        }
+        } */
 
 
-        .memory-card {
+        /* .memory-card {
             border: 2px solid #d755b7;
             ;
             display: flex;
@@ -105,16 +106,16 @@
             transition: transform 0.4s ease;
             width: 30vw;
             height: 70vh;
-            /* color: #60a5fa; */
-        }
+            /* color: #60a5fa; 
+        } */
 
-        .memory-card img {
+        /* .memory-card img {
             width: 30vw;
             height: 70vh;
             object-fit: cover;
             transition: filter 0.4s ease;
 
-        }
+        } */
 
         .memory-text {
             position: absolute;
@@ -167,6 +168,88 @@
             transform: scale(1.05);
             box-shadow: 0 12px 28px rgba(41, 40, 40, 0.804);
         }
+
+        /* 📱 Mobile adjustments */
+        /* @media (max-width: 480px) {
+            h1 {
+                font-size: 1.9rem;
+            }
+
+            p {
+                font-size: 1.3rem;
+            }
+
+            .card-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .memory-text {
+                font-size: 0.95rem;
+                padding: 0.8rem;
+            }
+
+            .nav a button {
+                width: 100%;
+                font-size: 1rem;
+                padding: 14px;
+            } */
+
+        .card-grid {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            align-items: flex-start;
+            flex-wrap: nowrap;
+            /* desktop: horizontal */
+        }
+
+
+
+        .memory-card {
+            border: 2px solid #d755b7;
+            background: white;
+            border-radius: 18px;
+            box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .memory-card img {
+            width: 100%;
+            height: auto;
+            max-width: 280px;
+            /* controls desktop image size */
+            display: block;
+        }
+
+        @media (max-width: 600px) {
+            .card-grid {
+                flex-direction: column;
+                /* vertical */
+                align-items: center;
+                /* center images */
+            }
+
+            .memory-card img {
+                max-width: 90vw;
+                /* responsive width on phone */
+            }
+        }
+
+    @media (min-width: 601px) {
+  .memory-card {
+    height: 320px; /* increased from 260px */
+  }
+
+  .memory-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
     </style>
     <link
         href="https://fonts.googleapis.com/css2?family=Cookie&family=Dancing+Script:wght@400..700&family=Sirivennela&display=swap"
@@ -191,16 +274,16 @@
             <div class="memory-text"> My cuttieeeee patoootieeeee, I wanna bitee youu so bad rn 😭</div>
         </div>
         <div class="memory-card" onclick="toggleCard(this)">
-            <img src="old-goru.jpeg" alt="Her photo 3" />
+            <img src="old goru.jpeg" alt="Her photo 3" />
             <div class="memory-text">Awwlelele, Is it youu bbg? 🤭but honestly, your "this look" looks so cuteeee 🤭
             </div>
         </div>
         <div class="memory-card" onclick="toggleCard(this)">
-            <img src="cutu-2.jpeg" alt="Her photo 4" />
+            <img src="cutu (2).jpeg" alt="Her photo 4" />
             <div class="memory-text">Proof that chaos looks good on you 😌✨</div>
         </div>
         <div class="memory-card" onclick="toggleCard(this)">
-            <img src="whatsapp.jpeg" alt="Her photo 5" />
+            <img src="WhatsApp Image 2026-02-01 at 15.32.53 (2).jpeg" alt="Her photo 5" />
             <div class="memory-text">Just Like this, we should always stay together cause i am not gonna let you go :3
             </div>
         </div>
@@ -219,6 +302,7 @@
 </body>
 
 </html>
+
 
 
 
