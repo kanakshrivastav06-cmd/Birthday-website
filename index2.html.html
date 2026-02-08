@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Favourite Creaturee :3</title>
+     <link rel="icon" href="Shy.jpeg" type="image/x-icon" border-radius="23px">
+    <style>
+        * {
+            font-family: "Poppins", sans-serif;
+
+        }
+
+        body {
+            margin: 0;
+            background: linear-gradient(135deg, #dbeafe, #fce7f3);
+            min-height: 100vh;
+            padding: 1rem;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        .flower {
+            position: fixed;
+            width: 260px;
+            height: 260px;
+            background: radial-gradient(circle at center, rgba(253, 124, 249, 0.9), rgba(243, 59, 246, 0.25), transparent 70%);
+            border-radius: 50%;
+            filter: blur(10px);
+            z-index: -1;
+            animation: float 7s ease-in-out infinite alternate;
+        }
+
+        .flower.one {
+            top: 5%;
+            left: 5%;
+        }
+
+        .flower.two {
+            top: 60%;
+            right: 5%;
+        }
+
+        .flower.three {
+            bottom: 10%;
+            left: 40%;
+        }
+
+        @keyframes float {
+            from {
+                transform: translateY(0px) scale(1);
+            }
+
+            to {
+                transform: translateY(-25px) scale(1.08);
+            }
+        }
+
+        h1 {
+            text-align: center;
+            color: #d269e7;
+            margin-bottom: 0.2rem;
+            font-family: "Cookie", cursive;
+            font-size: 40px;
+
+
+        }
+
+        p {
+            text-align: center;
+            color: #8a1e7c;
+            margin-bottom: 1rem;
+            font-family: "Tangerine", cursive;
+            font-weight: 700;
+            font-style: normal;
+            font-size: 32px;
+        }
+
+
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            row-gap: 1.9rem;
+            height: calc(100vh - 220px);
+            display: flex;
+            /* display: grid; */
+            gap: 20px;
+
+        }
+
+
+        .memory-card {
+            border: 2px solid #d755b7;
+            ;
+            display: flex;
+            align-items: center;
+            background: white;
+            border-radius: 18px;
+            box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.4s ease;
+            width: 30vw;
+            height: 70vh;
+            /* color: #60a5fa; */
+        }
+
+        .memory-card img {
+            width: 30vw;
+            height: 70vh;
+            object-fit: cover;
+            transition: filter 0.4s ease;
+
+        }
+
+        .memory-text {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 45%;
+            background: linear-gradient(to top, rgba(253, 124, 249, 0.9), rgba(243, 59, 246, 0.25), transparent);
+            color: white;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            padding: 1rem;
+            text-align: center;
+            font-size: 1rem;
+            opacity: 0;
+            transform: translateY(100%);
+            transition: opacity 0.4s ease, transform 0.4s ease;
+        }
+
+        .memory-card.active .memory-text {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+
+        .memory-card.active img {
+            filter: brightness(0.85);
+        }
+
+
+        .nav {
+            margin-top: 3rem;
+            text-align: center;
+        }
+
+        .nav a button {
+            background: #fa60c7;
+            border: none;
+            padding: 12px 28px;
+            border-radius: 25px;
+            color: white;
+            font-size: 1rem;
+            cursor: pointer;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 0 30px rgba(210, 48, 189, 0.6);
+        }
+
+        button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 12px 28px rgba(41, 40, 40, 0.804);
+        }
+    </style>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cookie&family=Dancing+Script:wght@400..700&family=Sirivennela&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cookie&family=Tangerine:wght@400;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="flower one"></div>
+    <div class="flower two"></div>
+    <div class="flower three"></div>
+    <h1>Here's some versions of you, lil bug :3</h1>
+    <p>These are just pictures of youu, now tap in photos to see what exactly i wannaa sayy to youu 🤭</p>
+    <div class="card-grid">
+        <div class="memory-card" onclick="toggleCard(this)">
+            <img src="cutu.jpeg" alt="Her photo 1" />
+            <div class="memory-text"> You made me smile everyday, just by your silly and cute behaviour, dumbo 💙</div>
+        </div>
+        <div class="memory-card" onclick="toggleCard(this)">
+            <img src="goru.jpeg" alt="Her photo 2" />
+            <div class="memory-text"> My cuttieeeee patoootieeeee, I wanna bitee youu so bad rn 😭</div>
+        </div>
+        <div class="memory-card" onclick="toggleCard(this)">
+            <img src="old goru.jpeg" alt="Her photo 3" />
+            <div class="memory-text">Awwlelele, Is it youu bbg? 🤭but honestly, your "this look" looks so cuteeee 🤭
+            </div>
+        </div>
+        <div class="memory-card" onclick="toggleCard(this)">
+            <img src="cutu (2).jpeg" alt="Her photo 4" />
+            <div class="memory-text">Proof that chaos looks good on you 😌✨</div>
+        </div>
+        <div class="memory-card" onclick="toggleCard(this)">
+            <img src="WhatsApp Image 2026-02-01 at 15.32.53 (2).jpeg" alt="Her photo 5" />
+            <div class="memory-text">Just Like this, we should always stay together cause i am not gonna let you go :3
+            </div>
+        </div>
+    </div>
+    <div class="nav">
+        <a href="goru3.html"><button>Now, let's move the next page :3</button></a>
+    </div>
+
+
+    <script>
+        function toggleCard(card) {
+            card.classList.toggle('active');
+        }
+    </script>
+
+</body>
+
+</html>
